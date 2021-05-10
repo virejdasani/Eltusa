@@ -3,4 +3,4 @@ This GameObject has to be linked in 2 places:
 FPP Player > ShortcutScript
 FPP Player > CollisionDetector
 
-Player should be over y=10 because the CollisionDetector script will reset the player transform if it goes under y10
+'Kill when y lesser than' should be set in Player > CollisionDetector to the height 'y' under which the player should die

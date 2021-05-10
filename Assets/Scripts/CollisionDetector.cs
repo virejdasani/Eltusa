@@ -9,6 +9,9 @@ public class CollisionDetector : MonoBehaviour
     [SerializeField]
     string groundTag;
 
+    [SerializeField]
+    float killWhenYLesserThan;
+
     // This is for the spawn coords of the player
     public Transform PlayerSpawnTransform;
 
@@ -31,7 +34,7 @@ public class CollisionDetector : MonoBehaviour
     void FixedUpdate()
     {
         // If the player goes below y=10, this means they feel of from the platforms. This is only here because the collision detection above sometimes takes time to work
-        if (gameObject.transform.position.y < 10)
+        if (gameObject.transform.position.y < killWhenYLesserThan)
         {
             transform.position = PlayerSpawnTransform.position;
             transform.rotation = PlayerSpawnTransform.rotation;
