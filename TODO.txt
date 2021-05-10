@@ -1,0 +1,9 @@
+make some platforms light and some heavy
+add tutorial scene
+
+story
+you found out you are trapped in a simulation and you are trying to escap
+
+Add fpp -> tpp change cam
+Add hands
+Add feet sounds

@@ -1,0 +1,6 @@
+An empty game object (PlayerSpawnTransform) has to be added with the same coords as the players spawn point. This is because if the player dies or presses 'R', they should go back to spawn
+This GameObject has to be linked in 2 places:
+FPP Player > ShortcutScript
+FPP Player > CollisionDetector
+
+Player should be over y=10 because the CollisionDetector script will reset the player transform if it goes under y10
