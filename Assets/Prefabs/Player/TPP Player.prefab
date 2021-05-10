@@ -374,7 +374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1447424143885124033}
   m_LocalRotation: {x: 0.17373411, y: 0, z: 0, w: 0.9847926}
-  m_LocalPosition: {x: 0.02, y: 1.816, z: 0.647}
+  m_LocalPosition: {x: 0.02, y: 5.26, z: -13.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1447424144350767641}
@@ -405,7 +405,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 70
+  field of view: 26.991467
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 2256192773475207717}
   - component: {fileID: 1447424144713790138}
   m_Layer: 0
-  m_Name: FPP Player
+  m_Name: TPP Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -568,12 +568,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkingSpeed: 15
-  runningSpeed: 22
-  jumpSpeed: 14
-  gravity: 22
+  runningSpeed: 20
+  jumpSpeed: 16
+  gravity: 34
   playerCamera: {fileID: 1447424143885124036}
   lookSpeed: 3
-  lookXLimit: 90
+  lookXLimit: 45
   canMove: 1
 --- !u!54 &701510264939070381
 Rigidbody:
