@@ -22,7 +22,6 @@ public class AnimationStateController : MonoBehaviour
         bool isWalking = animator.GetBool("isWalking");
         bool isRunning = animator.GetBool("isRunning");
         bool isJumping = animator.GetBool("isJumping");
-        bool isIdleJumping = animator.GetBool("isIdleJumping");
 
         bool verticalPressed = Input.GetButton("Vertical");
         bool runningPressed = Input.GetKey(KeyCode.LeftShift) && isWalking;
@@ -53,24 +52,15 @@ public class AnimationStateController : MonoBehaviour
             animator.SetBool("isRunning", false);
         }
 
-// For Jumping while moving
-        // This works for both walking and running because running has isWalking true
-        if (isWalking && !isJumping && jumpPressed)
+// For Jumping
+        if (!isJumping && jumpPressed)
         {
             animator.SetBool("isJumping", true);
         }
 
-// For Jumping when idle
-        if (!isWalking && !isIdleJumping && jumpPressed)
-        {
-            animator.SetBool("isIdleJumping", true);
-        }
-
-// To stop Jumping
-        if (!jumpPressed)
+        if (!jumpPressed && isJumping)
         {
             animator.SetBool("isJumping", false);
-            animator.SetBool("isIdleJumping", false);
         }
 
     }
