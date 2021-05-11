@@ -1,6 +1,6 @@
 //using System.Collections;
 using UnityEngine;
-//using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
 
 
 public class CollisionDetector : MonoBehaviour
@@ -10,7 +10,16 @@ public class CollisionDetector : MonoBehaviour
     string groundTag;
 
     [SerializeField]
+    string portalButtonTag;
+
+    // To get the y axis value under which the player should be killed
+    [SerializeField]
     float killWhenYLesserThan;
+
+    // To ask the user to enter the next scene name so when player collides with portal button, they go to that scene
+    [SerializeField]
+    string nextLevelSceneName;
+
 
     // This is for the spawn coords of the player
     public Transform PlayerSpawnTransform;
@@ -27,6 +36,12 @@ public class CollisionDetector : MonoBehaviour
             // This resets the players location back to spawn. This means, a 'spawn' empty GameObject has to be added to each level where the player can reset
             transform.position = PlayerSpawnTransform.position;
             transform.rotation = PlayerSpawnTransform.rotation;
+        }
+
+        // If collide with portal button, go to next level
+        if (collision.collider.tag == portalButtonTag)
+        {
+            SceneManager.LoadScene(nextLevelSceneName);
         }
 
     }

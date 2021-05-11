@@ -1579,7 +1579,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundTag: GroundPlane
+  portalButtonTag: 
   killWhenYLesserThan: 0
+  nextLevelSceneName: 
   PlayerSpawnTransform: {fileID: 901016803}
 --- !u!136 &1915285655
 CapsuleCollider:
@@ -1728,6 +1730,14 @@ PrefabInstance:
       propertyPath: PlayerSpawnTransform
       value: 
       objectReference: {fileID: 901016803}
+    - target: {fileID: 2256192773475207717, guid: a1d68e5b08897402f94d810f4b073176, type: 3}
+      propertyPath: portalButtonTag
+      value: PortalButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256192773475207717, guid: a1d68e5b08897402f94d810f4b073176, type: 3}
+      propertyPath: nextLevelSceneName
+      value: Test
+      objectReference: {fileID: 0}
     - target: {fileID: 2256192773475207717, guid: a1d68e5b08897402f94d810f4b073176, type: 3}
       propertyPath: killWhenYLesserThan
       value: 11
@@ -1879,15 +1889,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4520597236505722654, guid: 49904fabf2bf94287a22df448e2185aa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 49.927197
+      value: 51.7272
       objectReference: {fileID: 0}
     - target: {fileID: 4520597236505722654, guid: 49904fabf2bf94287a22df448e2185aa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.540849
+      value: -18.506676
       objectReference: {fileID: 0}
     - target: {fileID: 4520597236505722654, guid: 49904fabf2bf94287a22df448e2185aa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -72.85333
+      value: -73.7784
       objectReference: {fileID: 0}
     - target: {fileID: 4520597236505722654, guid: 49904fabf2bf94287a22df448e2185aa, type: 3}
       propertyPath: m_LocalRotation.w
